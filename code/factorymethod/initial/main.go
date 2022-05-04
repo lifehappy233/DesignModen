@@ -1,6 +1,6 @@
 package main
 
-import "design.model/factory/initial/splitter"
+import "design.model/factorymethod/initial/splitter"
 
 type MainForm struct {
 	FilePath   string

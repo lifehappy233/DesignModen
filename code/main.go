@@ -1,16 +1,19 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
-	"hash/fnv"
+	"os"
 )
 
-func ihash(key string) int {
-	h := fnv.New32a()
-	h.Write([]byte(key))
-	return int(h.Sum32() & 0x7fffffff)
-}
-
 func main() {
-	fmt.Println(ihash("aaa"))
+	writer, _ := os.Create("test")
+	enc := json.NewEncoder(writer)
+	val := []string{"fjdslf", "fjdsl"}
+	for _, kv := range val {
+		err := enc.Encode(&kv)
+		if err != nil {
+			fmt.Println(err)
+		}
+	}
 }
