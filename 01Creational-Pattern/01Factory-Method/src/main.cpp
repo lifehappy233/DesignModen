@@ -9,18 +9,11 @@ int main() {
   std::shared_ptr<factory::Creater> creater;
   std::shared_ptr<factory::Product> product;
 
-  std::string conf;
-  std::cin >> conf;
+  creater = std::make_shared<factory::ChineseCreater>();
+  product = creater->get_product();
+  std::cout << product->get_name() << "\n";
 
-  if (conf == "china") {
-    creater = std::make_shared<factory::ChineseCreater>();
-  } else if (conf == "japan") {
-    creater = std::make_shared<factory::JapaneseCreater>();
-  } else {
-    std::cout << "error conf\n";
-    exit(1);
-  }
-
+  creater = std::make_shared<factory::JapaneseCreater>();
   product = creater->get_product();
   std::cout << product->get_name() << "\n";
   return 0;
