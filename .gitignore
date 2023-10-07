@@ -3,3 +3,4 @@
 sample-code
 .idea/
 build
+cmake-build-debug/
