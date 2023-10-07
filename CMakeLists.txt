@@ -8,3 +8,4 @@ SET(EXECUTABLE_OUTPUT_PATH ${BIN_PATH})
 
 add_subdirectory(01Creational-Pattern/01Factory-Method)
 add_subdirectory(01Creational-Pattern/02Abstract-Factory)
+add_subdirectory(01Creational-Pattern/03Builder)
