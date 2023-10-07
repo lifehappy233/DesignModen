@@ -4,7 +4,6 @@
 #include "creater.h"
 #include "product.h"
 #include "concrete_creater.h"
-#include "concrete_creater.h"
 
 int main() {
   std::shared_ptr<factory::Creater> creater;
